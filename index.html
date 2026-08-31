@@ -4,95 +4,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Little World ❤️</title>
-    <link rel="stylesheet" href="style.css">
+
+```
+<title>Our Little World ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
 </head>
 
 <body>
 
 ```
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="hero-content">
-        <p class="small-text">A little place made especially for you</p>
+<!-- =========================
+     SECRET ENTRANCE
+========================== -->
 
-        <h1>Welcome to<br><span>Our Little World ❤️</span></h1>
+<section id="entrance" class="entrance">
 
-        <p class="subtitle">
-            A tiny corner of the internet filled with
-            memories, love and everything that reminds me of us.
+    <div class="stars"></div>
+
+    <div class="entrance-content">
+
+        <p class="entrance-small">
+            You've found a secret place...
         </p>
 
-        <button onclick="enterWorld()">Enter Our World ❤️</button>
+        <h1>
+            Welcome to<br>
+            <span>Our Little World ❤️</span>
+        </h1>
+
+        <p class="entrance-text">
+            But only one person was supposed to find it.
+        </p>
+
+        <button id="start-btn" onclick="showPassword()">
+            Are You My Favourite Person? ❤️
+        </button>
+
     </div>
 
-    <div class="floating-hearts">
-        ❤️ 💕 💗 💖 🤍
-    </div>
 </section>
 
 
-<!-- MAIN CONTENT -->
-<main id="world">
+<!-- =========================
+     PASSWORD SCREEN
+========================== -->
+
+<div id="password-screen" class="password-screen">
+
+    <div class="password-box">
+
+        <button class="back-btn" onclick="hidePassword()">
+            ← Back
+        </button>
+
+        <div class="lock">🔐</div>
+
+        <h2>One Little Question...</h2>
+
+        <p>
+            Enter the secret word to enter our world ❤️
+        </p>
+
+        <input
+            type="password"
+            id="password-input"
+            placeholder="The secret word..."
+        >
+
+        <p id="password-error"></p>
+
+        <button onclick="checkPassword()">
+            Unlock ❤️
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     CINEMATIC INTRO
+========================== -->
+
+<div id="cinematic-intro" class="cinematic-intro">
+
+    <p id="cinematic-text">
+        Loading something made especially for you...
+    </p>
+
+</div>
+
+
+<!-- =========================
+     MAIN WEBSITE
+========================== -->
+
+<div id="website" class="website">
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-text">
+                A little place made especially for you
+            </p>
+
+            <h1>
+                Welcome to<br>
+                <span>Our Little World ❤️</span>
+            </h1>
+
+            <p class="subtitle">
+                A tiny corner of the internet filled with
+                memories, love and everything that reminds me of us.
+            </p>
+
+            <button onclick="enterWorld()">
+                Enter Our World ❤️
+            </button>
+
+        </div>
+
+    </section>
+
 
     <!-- MEMORIES -->
-    <section class="section">
+
+    <section id="memories" class="section">
+
         <h2>Our Memories 📸</h2>
 
         <p class="section-intro">
-            Every little moment with you became something I want to remember.
+            Every little moment with you became something
+            I want to remember.
         </p>
+
 
         <div class="memory-grid">
 
             <div class="memory-card">
-                <div class="memory-image">📸</div>
+
+                <div class="memory-image">
+                    📸
+                </div>
+
                 <h3>Our First Memory</h3>
-                <p>Add your favourite memory here.</p>
+
+                <p>
+                    Add your favourite memory here.
+                </p>
+
             </div>
 
+
             <div class="memory-card">
-                <div class="memory-image">❤️</div>
+
+                <div class="memory-image">
+                    ❤️
+                </div>
+
                 <h3>One Of My Favourites</h3>
-                <p>Write about a moment that still makes you smile.</p>
+
+                <p>
+                    Write about a moment that still
+                    makes you smile.
+                </p>
+
             </div>
 
+
             <div class="memory-card">
-                <div class="memory-image">✨</div>
+
+                <div class="memory-image">
+                    ✨
+                </div>
+
                 <h3>A Moment I'll Never Forget</h3>
-                <p>Add another beautiful memory here.</p>
+
+                <p>
+                    Add another beautiful memory here.
+                </p>
+
             </div>
 
         </div>
+
     </section>
 
 
     <!-- OPEN WHEN -->
+
     <section class="section open-when">
 
         <h2>Open When... 💌</h2>
 
         <div class="open-grid">
 
-            <button class="letter-button" onclick="openLetter('miss')">
-                🥺<br>
-                <span>You Miss Me</span>
+
+            <button
+                class="letter-button"
+                onclick="openLetter('miss')"
+            >
+
+                🥺
+
+                <span>
+                    You Miss Me
+                </span>
+
             </button>
 
-            <button class="letter-button" onclick="openLetter('sad')">
-                🫂<br>
-                <span>You're Sad</span>
+
+            <button
+                class="letter-button"
+                onclick="openLetter('sad')"
+            >
+
+                🫂
+
+                <span>
+                    You're Sad
+                </span>
+
             </button>
 
-            <button class="letter-button" onclick="openLetter('stress')">
-                🤍<br>
-                <span>You're Stressed</span>
+
+            <button
+                class="letter-button"
+                onclick="openLetter('stress')"
+            >
+
+                🤍
+
+                <span>
+                    You're Stressed
+                </span>
+
             </button>
 
-            <button class="letter-button" onclick="openLetter('sleep')">
-                🌙<br>
-                <span>You Can't Sleep</span>
+
+            <button
+                class="letter-button"
+                onclick="openLetter('sleep')"
+            >
+
+                🌙
+
+                <span>
+                    You Can't Sleep
+                </span>
+
             </button>
+
 
         </div>
 
@@ -100,39 +269,67 @@
 
 
     <!-- REASONS -->
+
     <section class="section reasons">
 
         <h2>Reasons Why I Love You ❤️</h2>
 
+
         <div class="reason-box">
+
             <p id="reason">
-                Click the button and I'll tell you something ❤️
+                Click the button and I'll tell you
+                something ❤️
             </p>
+
         </div>
 
+
         <button onclick="showReason()">
+
             Tell Me ❤️
+
         </button>
+
 
     </section>
 
 
     <!-- FUTURE -->
+
     <section class="section">
 
         <h2>Our Future 🌍</h2>
 
+
         <p class="section-intro">
+
             Things I hope we get to do together someday.
+
         </p>
+
 
         <div class="future-list">
 
-            <div>✈️ Go on a trip together</div>
-            <div>🍝 Try a new restaurant</div>
-            <div>🌙 Go on a late night drive</div>
-            <div>📸 Make more memories</div>
-            <div>❤️ Keep choosing each other</div>
+            <div>
+                ✈️ Go on a trip together
+            </div>
+
+            <div>
+                🍝 Try a new restaurant
+            </div>
+
+            <div>
+                🌙 Go on a late night drive
+            </div>
+
+            <div>
+                📸 Make more memories
+            </div>
+
+            <div>
+                ❤️ Keep choosing each other
+            </div>
 
         </div>
 
@@ -140,31 +337,53 @@
 
 
     <!-- FINAL LETTER -->
+
     <section class="final-section">
 
-        <h2>One Last Thing... ❤️</h2>
+        <h2>
+            One Last Thing... ❤️
+        </h2>
+
 
         <button onclick="showFinalLetter()">
+
             Open My Heart 💌
+
         </button>
+
 
     </section>
 
-</main>
+
+</div>
 
 
-<!-- LETTER MODAL -->
+<!-- =========================
+     LETTER MODAL
+========================== -->
+
 <div id="modal" class="modal">
+
 
     <div class="modal-content">
 
-        <span class="close" onclick="closeModal()">&times;</span>
+
+        <span
+            class="close"
+            onclick="closeModal()"
+        >
+            &times;
+        </span>
+
 
         <h2 id="letter-title"></h2>
 
+
         <p id="letter-text"></p>
 
+
     </div>
+
 
 </div>
 
